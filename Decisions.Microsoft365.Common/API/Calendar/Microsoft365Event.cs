@@ -1,5 +1,4 @@
 using Decisions.Microsoft365.Common.API.Email;
-using DecisionsFramework;
 using DecisionsFramework.Design.ConfigurationStorage.Attributes;
 using Newtonsoft.Json;
 
@@ -179,18 +178,6 @@ namespace Decisions.Microsoft365.Common.API.Calendar
         [WritableValue]
         [JsonProperty("onlineMeeting")]
         public string? OnlineMeeting { get; set; }
-        
-        public static Microsoft365Event? JsonDeserialize(string content)
-        {
-            try
-            {
-                return JsonConvert.DeserializeObject<Microsoft365Event>(content);
-            }
-            catch (Exception ex)
-            {
-                throw new BusinessRuleException("Could not deserialize result.", ex);
-            }
-        }
     }
 
     [Writable]

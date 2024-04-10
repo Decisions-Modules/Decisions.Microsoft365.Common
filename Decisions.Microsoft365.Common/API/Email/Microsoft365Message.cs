@@ -1,5 +1,4 @@
 using System.Runtime.Serialization;
-using DecisionsFramework;
 using DecisionsFramework.Design.ConfigurationStorage.Attributes;
 using Newtonsoft.Json;
 
@@ -131,18 +130,6 @@ namespace Decisions.Microsoft365.Common.API.Email
         [WritableValue]
         [JsonProperty("flag")]
         public Microsoft365EmailFlag? Flag { get; set; }
-        
-        public static Microsoft365Message? JsonDeserialize(string content)
-        {
-            try
-            {
-                return JsonConvert.DeserializeObject<Microsoft365Message>(content);
-            }
-            catch (Exception ex)
-            {
-                throw new BusinessRuleException("Could not deserialize result.", ex);
-            }
-        }
     }
 
     [Writable]

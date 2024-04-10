@@ -1,5 +1,4 @@
 using Decisions.Microsoft365.Common.API.Email;
-using DecisionsFramework;
 using DecisionsFramework.Design.ConfigurationStorage.Attributes;
 using Newtonsoft.Json;
 
@@ -167,18 +166,6 @@ namespace Decisions.Microsoft365.Common.API.People
         [WritableValue]
         [JsonProperty("otherAddress")]
         public Microsoft365PhysicalAddress? OtherAddress { get; set; }
-        
-        public static Microsoft365Contact? JsonDeserialize(string content)
-        {
-            try
-            {
-                return JsonConvert.DeserializeObject<Microsoft365Contact>(content);
-            }
-            catch (Exception ex)
-            {
-                throw new BusinessRuleException("Could not deserialize result.", ex);
-            }
-        }
     }
 
     [Writable]

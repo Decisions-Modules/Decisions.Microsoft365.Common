@@ -1,4 +1,3 @@
-using DecisionsFramework;
 using DecisionsFramework.Design.ConfigurationStorage.Attributes;
 using Newtonsoft.Json;
 
@@ -138,18 +137,6 @@ namespace Decisions.Microsoft365.Common.API.Group
         [WritableValue]
         [JsonProperty("onPremisesProvisioningErrors")]
         public Microsoft365OnPremisesProvisioningError[]? OnPremisesProvisioningErrors { get; set; }
-        
-        public static Microsoft365Group? JsonDeserialize(string content)
-        {
-            try
-            {
-                return JsonConvert.DeserializeObject<Microsoft365Group>(content);
-            }
-            catch (Exception ex)
-            {
-                throw new BusinessRuleException("Could not deserialize result.", ex);
-            }
-        }
     }
     
     [Writable]

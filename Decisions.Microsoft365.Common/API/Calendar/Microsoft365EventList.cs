@@ -1,4 +1,3 @@
-using DecisionsFramework;
 using DecisionsFramework.Design.ConfigurationStorage.Attributes;
 using Newtonsoft.Json;
 
@@ -14,17 +13,5 @@ namespace Decisions.Microsoft365.Common.API.Calendar
         [WritableValue]
         [JsonProperty("value")]
         public Microsoft365Event[]? Value { get; set; }
-        
-        public static Microsoft365EventList? JsonDeserialize(string content)
-        {
-            try
-            {
-                return JsonConvert.DeserializeObject<Microsoft365EventList>(content);
-            }
-            catch (Exception ex)
-            {
-                throw new BusinessRuleException("Could not deserialize result.", ex);
-            }
-        }
     }
 }

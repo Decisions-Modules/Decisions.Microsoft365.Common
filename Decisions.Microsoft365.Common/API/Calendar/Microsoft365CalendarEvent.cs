@@ -35,6 +35,7 @@ namespace Decisions.Microsoft365.Common.API.Calendar
         [WritableValue]
         [JsonProperty("allowNewTimeProposals")]
         public bool? AllowNewTimeProposals { get; set; }
+        
         [WritableValue]
         [JsonProperty("transactionId")]
         public string? TransactionId { get; set; }
