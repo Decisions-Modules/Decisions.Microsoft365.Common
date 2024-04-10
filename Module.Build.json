@@ -17,7 +17,7 @@
 		"MsSqlScript": "",
 		"CustomImages": ""
     },
-    "Version": "9.0.0",
+    "Version": "9.20",
     "ImagePath": "./image.png",
     "Description": ""
 }
