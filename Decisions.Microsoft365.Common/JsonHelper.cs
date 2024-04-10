@@ -13,7 +13,7 @@ namespace Decisions.Microsoft365.Common
             }
             catch (Exception ex)
             {
-                throw new BusinessRuleException("Could not deserialize result.", ex);
+                throw new LoggedException($"Could not deserialize result: {content}", ex);
             }
         }
     }
