@@ -1,0 +1,23 @@
+{
+    "Resources": {
+		"NoComponents": true,
+		"CoreServicesDlls":[
+			"./Decisions.Microsoft365.Common/obj/Decisions.Microsoft365.Common.dll"
+		],
+		"ReferenceDlls":
+		[
+			"./Decisions.Microsoft365.Common/obj/Microsoft.Graph.dll",
+			"./Decisions.Microsoft365.Common/obj/Microsoft.Graph.Core.dll"
+		],
+		"CliDlls": "",
+		"WebPages": "",
+		"InstallScript": "",
+		"SqlScripts": "",
+		"ObjectsToImport": "",
+		"MsSqlScript": "",
+		"CustomImages": ""
+    },
+    "Version": "9.0.0",
+    "ImagePath": "./image.png",
+    "Description": ""
+}
