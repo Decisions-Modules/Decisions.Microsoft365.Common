@@ -18,6 +18,6 @@
 		"CustomImages": ""
     },
     "Version": "9.0.0",
-    "ImagePath": "./microsoft365.png",
-    "Description": ""
+    "ImagePath": "./image.png",
+    "Description": "The Microsoft 365 Common module provides API integrations and various tools required for other Microsoft 365 modules to function."
 }
