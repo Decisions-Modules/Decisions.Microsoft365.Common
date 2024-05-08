@@ -8,10 +8,6 @@ namespace Decisions.Microsoft365.Common.API.Calendar
     public class Microsoft365Event
     {
         [WritableValue]
-        [JsonProperty("@odata.context")]
-        public string? OdataContext { get; set; }
-
-        [WritableValue]
         [JsonProperty("@odata.etag")]
         public string? OdataEtag { get; set; }
 
@@ -177,7 +173,15 @@ namespace Decisions.Microsoft365.Common.API.Calendar
 
         [WritableValue]
         [JsonProperty("onlineMeeting")]
-        public string? OnlineMeeting { get; set; }
+        public Microsoft365JoinUrl? OnlineMeeting { get; set; }
+
+        [WritableValue]
+        [JsonProperty("calendar@odata.associationLink")]
+        public string? CalendarODataAssociationLink;
+
+        [WritableValue]
+        [JsonProperty("calendar@odata.navigationLink")]
+        public string? CalendarODataNavigationLink;
     }
 
     [Writable]
@@ -225,7 +229,7 @@ namespace Decisions.Microsoft365.Common.API.Calendar
     {
         [WritableValue]
         [JsonProperty("dateTime")]
-        public DateTimeOffset? DateTime { get; set; }
+        public DateTime? DateTime { get; set; }
 
         [WritableValue]
         [JsonProperty("timeZone")]
@@ -258,5 +262,13 @@ namespace Decisions.Microsoft365.Common.API.Calendar
         [WritableValue]
         [JsonProperty("emailAddress")]
         public Microsoft365EmailAddress? EmailAddress { get; set; }
+    }
+
+    [Writable]
+    public class Microsoft365JoinUrl
+    {
+        [WritableValue]
+        [JsonProperty("joinUrl")]
+        private string? JoinUrl { get; set; }
     }
 }
