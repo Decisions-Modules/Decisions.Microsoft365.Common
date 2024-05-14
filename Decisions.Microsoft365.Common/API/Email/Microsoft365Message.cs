@@ -8,10 +8,6 @@ namespace Decisions.Microsoft365.Common.API.Email
     public class Microsoft365Message
     {
         [WritableValue]
-        [JsonProperty("@odata.context")]
-        public string? OdataContext { get; set; }
-
-        [WritableValue]
         [JsonProperty("@odata.etag")]
         public string? OdataEtag { get; set; }
 
@@ -117,15 +113,15 @@ namespace Decisions.Microsoft365.Common.API.Email
 
         [WritableValue]
         [JsonProperty("ccRecipients")]
-        public string[]? CcRecipients { get; set; }
+        public Microsoft365EmailFrom[]? CcRecipients { get; set; }
 
         [WritableValue]
         [JsonProperty("bccRecipients")]
-        public string[]? BccRecipients { get; set; }
+        public Microsoft365EmailFrom[]? BccRecipients { get; set; }
 
         [WritableValue]
         [JsonProperty("replyTo")]
-        public string[]? ReplyTo { get; set; }
+        public Microsoft365EmailFrom[]? ReplyTo { get; set; }
 
         [WritableValue]
         [JsonProperty("flag")]
