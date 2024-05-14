@@ -13,5 +13,9 @@ namespace Decisions.Microsoft365.Common.API.Email
         [WritableValue]
         [JsonProperty("value")]
         public Microsoft365Message[]? Value { get; set; }
+        
+        [WritableValue]
+        [JsonProperty("@odata.nextLink")]
+        public string? OdataNextLink { get; set; }
     }
 }
