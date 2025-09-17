@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using DecisionsFramework.Design.ConfigurationStorage.Attributes;
 using Newtonsoft.Json;
 
@@ -33,6 +34,10 @@ namespace Decisions.Microsoft365.Common.API.Email
         [WritableValue]
         [JsonProperty("ccRecipients")]
         public Microsoft365Recipient[]? CcRecipients { get; set; }
+        
+        [WritableValue]
+        [JsonProperty("attachments")]
+        public Microsoft365Attachment[]? Attachments { get; set; }
     }
 
     [Writable]
@@ -49,5 +54,21 @@ namespace Decisions.Microsoft365.Common.API.Email
         [WritableValue]
         [JsonProperty("address")]
         public string? Address { get; set; }
+    }
+    
+    [Writable]
+    public class Microsoft365Attachment
+    {
+        [WritableValue]
+        [JsonPropertyName("@odata.type")]
+        public string? ODataType { get; set; }
+
+        [WritableValue]
+        [JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        [WritableValue]
+        [JsonPropertyName("contentBytes")]
+        public string? ContentBytes { get; set; }
     }
 }
