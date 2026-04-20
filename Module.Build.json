@@ -1,4 +1,4 @@
-{
+﻿{
     "Resources": {
 		"NoComponents": true,
 		"CoreServicesDlls":[
@@ -18,7 +18,7 @@
 		"MsSqlScript": "",
 		"CustomImages": ""
     },
-    "Version": "9.16.0",
+    "Version": "10.0.0",
     "ImagePath": "./image.png",
     "Description": "The Microsoft 365 Common module provides API integrations and various tools required for other Microsoft 365 modules to function.",
     "HideInFeaturesList": true
